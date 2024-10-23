@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang='es'>
+    <title>App Recopilador de datos</title>
+    <head>
+        <link href="../static/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class = 'container'>
+            <h1>Datos de alquiler</h1>
+            <h3>Por favor, completa los campos para obtener estadísticas sobre el precio medio del alquiler en España.</h3>
+            <div class="message">{{text | safe}}</div> 
+            <form action="{{url_for('success')}}" method="POST">
+                <input title="Tu correo electrónico estará seguro con nosotros" placeholder="Introduce tu email" type="email" name="email_name" required> <br>
+                <input title="Sus datos estarán seguros con nosotros" placeholder="Ingresa el precio de su alquiler en euros" type="number" min="150" max="5000" name="price_number" required><br> 
+                <button type="submit">Enviar</submit>
+
+            </form>
+
+
+
+
+        </div>
+    </body>
+
+
+</html>
